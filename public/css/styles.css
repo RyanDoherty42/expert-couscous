@@ -128,9 +128,9 @@ h2{font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.08;letter-spacing:-.03em;f
 .social-band p{margin:0;color:var(--muted);font-size:1.05rem}
 .social-actions{display:grid;grid-template-columns:repeat(2,150px);justify-content:center;gap:12px;margin:26px 0 0}
 .social-actions .btn{min-height:50px;padding:12px 14px;width:100%}
-.social-actions .social-tt{color:#fff}
-.btn.social-fb{background:#fff;color:#1f1f1f;border:1.5px solid #dadce0}.btn.social-fb:hover{background:#f8f9fa;border-color:#c4c7c5}
-.btn.social-fb img{width:20px;height:20px;flex:0 0 auto}
+.social-actions .btn{color:#fff}
+.btn.social-fb{background:#1665d8;color:#fff}.btn.social-fb:hover{background:#0b57c8}
+.btn.social-fb img,.btn.social-tt img{width:20px;height:20px;flex:0 0 auto}
 .social-tt{background:#111}.social-tt:hover{background:#000}
 
 /* Form */
