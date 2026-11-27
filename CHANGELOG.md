@@ -3,6 +3,10 @@
 What changed each time the site went live. Newest first.
 Each entry lists the commit that went live, so the site can be put back to any of these points.
 
+## 27 Nov 2026 – v47 (commit `2d71bd5`)
+- New "Watch us at work" TikTok section with five video thumbnails linking to TikTok, between "What we do" and "About us", on a dark background
+- Removed the old "Have you checked us out on Facebook and TikTok?" banner
+
 ## 27 Nov 2026 – v44 (commit `893b928`)
 - Site-wide design polish: see-through call button in the main banner, compact service cards on phones, area tags instead of a list, nationwide note box
 - Photos swipe sideways on phones, like the reviews
