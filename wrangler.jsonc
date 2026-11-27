@@ -1,0 +1,10 @@
+{
+  // Cloudflare Worker settings. The name must match the Worker's name in the Cloudflare dashboard.
+  "name": "expert-couscous",
+  "compatibility_date": "2026-11-01",
+  // Everything inside the public/ folder is served as the website.
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}
