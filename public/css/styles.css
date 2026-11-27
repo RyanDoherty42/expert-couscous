@@ -327,3 +327,7 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 .reviews-link{margin:32px 0 0}
 @media (max-width:900px){.review,.review:nth-child(n+4){grid-column:span 6}}
 @media (max-width:600px){.reviews-link .btn{width:100%}}
+.hero-rating{display:inline-flex;align-items:center;gap:8px;margin:0 0 28px;color:#f1f1f1;font-size:.95rem;font-weight:600;text-decoration:none}
+.hero-rating .stars{color:#fbbc04;letter-spacing:2px}
+.hero-rating strong{color:#fff}
+.hero-rating:hover{text-decoration:underline}
