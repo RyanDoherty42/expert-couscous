@@ -337,13 +337,30 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 .reviews-link svg{width:18px;height:18px}
 .star-row{display:inline-flex;gap:2px;color:#fbbc04;flex:0 0 auto}
 .star-row svg{width:17px;height:17px;display:block}
-.rating-badges{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 20px}
 .rating-badge{display:flex;align-items:center;gap:14px;padding:12px 20px 12px 16px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);color:var(--ink);text-decoration:none;transition:transform .2s}
 .rating-badge:hover{transform:translateY(-2px)}
 .rb-score{font-size:1.7rem;font-weight:800;line-height:1;letter-spacing:-.02em}
 .rb-meta{display:flex;flex-direction:column;gap:4px;font-size:.88rem;color:var(--muted);line-height:1.2}
 .rb-rec{font-weight:700;color:#1877f2}
-.btn.google{background:#fff;color:#1f1f1f;border:1px solid #dadce0;font-weight:600}
-.btn.google:hover{background:#f8f9fa;box-shadow:0 1px 3px rgba(60,64,67,.3)}
 .btn.google svg{color:#fbbc04}
-@media (max-width:600px){.rating-badge{flex:1 1 100%}}
+/* Reviews section layout */
+.reviews-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 32px;margin-bottom:40px}
+.reviews-head .section-head{margin-bottom:0}
+.rating-badges{display:flex;gap:12px}
+.btn.google{background:#202124;color:#fff}
+.btn.google:hover{background:#000}
+.review-stars{margin-bottom:14px}
+.review-stars .star-row svg{width:18px;height:18px}
+.review figcaption{display:flex;flex-direction:column;gap:2px}
+.review figcaption span{font-weight:500;font-size:.82rem;color:var(--muted)}
+.reviews-link{margin:36px 0 0}
+@media (max-width:700px){
+  .reviews-head{margin-bottom:28px}
+  .rating-badges{width:100%}
+  .rating-badge{flex:1 1 0;flex-direction:column;align-items:flex-start;gap:8px;padding:14px 16px}
+  .rb-meta{font-size:.8rem}
+  .review-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 calc(50% - 50vw);padding:4px calc(50vw - 50%) 12px;scroll-padding:0 calc(50vw - 50%);-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .review-grid::-webkit-scrollbar{display:none}
+  .review,.review:nth-child(n+4){flex:0 0 84%;scroll-snap-align:start}
+  .reviews-link{margin-top:24px}
+}
