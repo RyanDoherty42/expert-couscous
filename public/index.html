@@ -26,7 +26,7 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preload" as="image" href="assets/hero-1200.webp" imagesrcset="assets/hero-700.webp 700w, assets/hero-1200.webp 1200w" imagesizes="100vw" fetchpriority="high">
-  <link rel="stylesheet" href="css/styles.css?v=34">
+  <link rel="stylesheet" href="css/styles.css?v=35">
 
   <script type="application/ld+json">
   {
@@ -57,6 +57,7 @@
     <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.4 21v-8.2h2.75l.41-3.2H13.4V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14c-.3-.04-1.34-.14-2.55-.14-2.52 0-4.25 1.54-4.25 4.37V9.6H7.04v3.2h2.85V21h3.51Z"/></symbol>
     <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M19.6 7.2a5.9 5.9 0 0 1-3.66-1.27v8.16a6.16 6.16 0 1 1-5.32-6.1v3.23a2.98 2.98 0 1 0 2.1 2.85V2.5h3.22c.15 1.3.88 2.5 1.99 3.22a5.9 5.9 0 0 0 1.67.72v.76Z"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5.2 3.5h3.1l1.5 4.2-2 1.7a15.2 15.2 0 0 0 6.8 6.8l1.7-2 4.2 1.5v3.1c0 .9-.7 1.6-1.6 1.6C10.1 20.4 3.6 13.9 3.6 5.1c0-.9.7-1.6 1.6-1.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5-4.9-4.6 6.6-.8z"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-house" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></g></symbol>
     <symbol id="i-van" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v9H2z"/><path d="M13 9h4l3 3v3h-7"/><circle cx="6.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/></g></symbol>
@@ -93,7 +94,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Local &amp; nationwide</li>
         </ul>
         <div class="hero-ratings">
-          <a class="hero-rating" href="https://maps.app.goo.gl/fW2u2MpgDU1QJ3SB8" target="_blank" rel="noopener"><span class="stars" aria-hidden="true">★★★★★</span> <span><strong>5.0</strong> from 125 Google reviews</span></a>
+          <a class="hero-rating" href="https://maps.app.goo.gl/fW2u2MpgDU1QJ3SB8" target="_blank" rel="noopener"><span class="star-row" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span> <span><strong>5.0</strong> from 125 Google reviews</span></a>
           <a class="hero-rating" href="https://www.facebook.com/100084891281969/reviews" target="_blank" rel="noopener"><svg class="fb" aria-hidden="true"><use href="#i-fb"/></svg> <span><strong>100%</strong> recommended · 417 reviews<span class="sr-only"> on Facebook</span></span></a>
         </div>
         <div class="hero-actions">
@@ -153,7 +154,11 @@
 
     <section class="reviews" id="reviews"><div class="wrap">
       <h2>What customers say</h2>
-      <p class="reviews-intro">Rated 5.0 from 125 reviews on Google and 100% recommended from 417 reviews on Facebook. Here are a few recent ones from Google.</p>
+      <div class="rating-badges">
+        <a class="rating-badge" href="https://maps.app.goo.gl/fW2u2MpgDU1QJ3SB8" target="_blank" rel="noopener"><span class="rb-score">5.0</span><span class="rb-meta"><span class="star-row" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span>125 Google reviews</span></span></a>
+        <a class="rating-badge" href="https://www.facebook.com/100084891281969/reviews" target="_blank" rel="noopener"><span class="rb-score">100%</span><span class="rb-meta"><span class="rb-rec">Recommended</span><span>417 Facebook reviews</span></span></a>
+      </div>
+      <p class="reviews-intro">A few recent reviews from Google.</p>
       <div class="review-grid">
         <figure class="review"><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote><p>“Fantastic service will definitely be using moving forward friendly face squeezed my delivery in despite them being busy built the table for me. Communicated through out thank you for fab service”</p></blockquote><figcaption>Charlotte D.</figcaption></figure>
         <figure class="review"><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote><p>“Brilliant service. House move from a first floor flat was no problem for these guys. Friendly, courteous and efficient. I can&#39;t recommend them enough!”</p></blockquote><figcaption>Polly H.</figcaption></figure>
@@ -161,7 +166,7 @@
         <figure class="review"><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote><p>“Amazing service so reliable communication is brilliant, if I could give more than 5 stars definitely would, very highly recommended our needs wasn’t the easiest but Mike managed to find a way and went above and beyond in short notice too thankyou so much”</p></blockquote><figcaption>Laura N.</figcaption></figure>
         <figure class="review"><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote><p>“Fabulous service, great communication from start to finish. Helped me get a large sofa upstairs too..removing and replacing arms so it woukd fit! Can&#39;t fault highly recommend! Thank you !”</p></blockquote><figcaption>Katie F.</figcaption></figure>
       </div>
-      <p class="reviews-link"><a class="btn" href="https://maps.app.goo.gl/fW2u2MpgDU1QJ3SB8" target="_blank" rel="noopener">See all our reviews on Google</a><a class="btn social-fb" href="https://www.facebook.com/100084891281969/reviews" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg> See our Facebook reviews</a></p>
+      <p class="reviews-link"><a class="btn google" href="https://maps.app.goo.gl/fW2u2MpgDU1QJ3SB8" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-star"/></svg> See all our reviews on Google</a><a class="btn social-fb" href="https://www.facebook.com/100084891281969/reviews" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg> See our Facebook reviews</a></p>
     </div></section>
 
     <section class="quote" id="quote"><div class="wrap quote-grid">
@@ -399,6 +404,6 @@
     <a class="btn whatsapp" href="https://wa.me/447359307175" target="_blank" rel="noopener" aria-label="Message us on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
   </div>
 
-  <script src="js/main.js?v=34" defer></script>
+  <script src="js/main.js?v=35" defer></script>
 </body>
 </html>

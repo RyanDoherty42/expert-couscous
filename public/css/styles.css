@@ -315,8 +315,8 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 @media (max-width:360px){.area-list{gap:12px 10px;padding:20px 16px}.area-list li{gap:7px;font-size:.92rem}}
 
 .reviews{background:#fff}
-.reviews h2{margin:0 0 10px}
-.reviews-intro{margin:0 0 36px;color:var(--muted);font-size:1.05rem}
+.reviews h2{margin:0 0 22px}
+.reviews-intro{margin:0 0 28px;color:var(--muted);font-size:1.05rem}
 .review-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
 .review{grid-column:span 2;margin:0;padding:24px;background:var(--soft);border-radius:var(--radius);display:flex;flex-direction:column}
 .review:nth-child(n+4){grid-column:span 3}
@@ -329,10 +329,21 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 @media (max-width:600px){.reviews-link .btn{width:100%}}
 .hero-ratings{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:0 0 28px}
 .hero-rating{display:inline-flex;align-items:center;gap:8px;color:#f1f1f1;font-size:.95rem;font-weight:600;text-decoration:none}
-.hero-rating .stars{color:#fbbc04;letter-spacing:2px}
 .hero-rating strong{color:#fff}
 .hero-rating:hover{text-decoration:underline}
 .hero-rating svg.fb{width:20px;height:20px;padding:3px;border-radius:50%;background:#1877f2;color:#fff;flex:0 0 auto}
 .reviews-link{display:flex;flex-wrap:wrap;gap:12px}
 .reviews-link .social-fb{color:#fff}
 .reviews-link svg{width:18px;height:18px}
+.star-row{display:inline-flex;gap:2px;color:#fbbc04;flex:0 0 auto}
+.star-row svg{width:17px;height:17px;display:block}
+.rating-badges{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 20px}
+.rating-badge{display:flex;align-items:center;gap:14px;padding:12px 20px 12px 16px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);color:var(--ink);text-decoration:none;transition:transform .2s}
+.rating-badge:hover{transform:translateY(-2px)}
+.rb-score{font-size:1.7rem;font-weight:800;line-height:1;letter-spacing:-.02em}
+.rb-meta{display:flex;flex-direction:column;gap:4px;font-size:.88rem;color:var(--muted);line-height:1.2}
+.rb-rec{font-weight:700;color:#1877f2}
+.btn.google{background:#fff;color:#1f1f1f;border:1px solid #dadce0;font-weight:600}
+.btn.google:hover{background:#f8f9fa;box-shadow:0 1px 3px rgba(60,64,67,.3)}
+.btn.google svg{color:#fbbc04}
+@media (max-width:600px){.rating-badge{flex:1 1 100%}}
