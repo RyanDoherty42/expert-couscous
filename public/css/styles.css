@@ -334,24 +334,13 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 .reviews-link{margin:32px 0 0}
 @media (max-width:900px){.review,.review:nth-child(n+4){grid-column:span 6}}
 @media (max-width:600px){.reviews-link .btn{width:100%}}
-.hero-ratings{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:0 0 28px}
-.hero-rating{display:inline-flex;align-items:center;gap:8px;color:#f1f1f1;font-size:.95rem;font-weight:600;text-decoration:none}
-.hero-rating strong{color:#fff}
-.hero-rating:hover{text-decoration:underline}
-.hero-rating img.fb{width:20px;height:20px;flex:0 0 auto}
 .reviews-link{display:flex;flex-wrap:wrap;gap:12px}
 .reviews-link svg{width:18px;height:18px}
 .star-row{display:inline-flex;gap:2px;color:#fbbc04;flex:0 0 auto}
 .star-row svg{width:17px;height:17px;display:block}
-.rating-badge{display:flex;align-items:center;gap:14px;padding:12px 20px 12px 16px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);color:var(--ink);text-decoration:none;transition:transform .2s}
-.rating-badge:hover{transform:translateY(-2px)}
-.rb-score{font-size:1.7rem;font-weight:800;line-height:1;letter-spacing:-.02em}
-.rb-meta{display:flex;flex-direction:column;gap:4px;font-size:.88rem;color:var(--muted);line-height:1.2}
-.rb-rec{font-weight:700;color:#1877f2}
 /* Reviews section layout */
 .reviews-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 32px;margin-bottom:40px}
 .reviews-head .section-head{margin-bottom:0}
-.rating-badges{display:flex;gap:12px}
 .btn.google{background:#fff;color:#1f1f1f;border:1.5px solid #dadce0}
 .btn.google:hover{background:#f8f9fa;border-color:#c4c7c5}
 .btn.google img{width:20px;height:20px;flex:0 0 auto}
@@ -362,11 +351,31 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 .reviews-link{margin:36px 0 0}
 @media (max-width:700px){
   .reviews-head{margin-bottom:28px}
-  .rating-badges{width:100%}
-  .rating-badge{flex:1 1 0;flex-direction:column;align-items:flex-start;gap:8px;padding:14px 16px}
-  .rb-meta{font-size:.8rem}
   .review-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 calc(50% - 50vw);padding:4px calc(50vw - 50%) 12px;scroll-padding:0 calc(50vw - 50%);-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .review-grid::-webkit-scrollbar{display:none}
   .review,.review:nth-child(n+4){flex:0 0 84%;scroll-snap-align:start}
   .reviews-link{margin-top:24px}
 }
+/* Rating chips (hero + reviews section) */
+.rating-chips{display:flex;flex-wrap:wrap;gap:12px}
+.rating-chip{display:flex;flex-direction:column;gap:6px;min-width:178px;padding:14px 18px;border-radius:16px;text-decoration:none;transition:transform .2s,background .2s}
+.rating-chip:hover{transform:translateY(-2px)}
+.rc-top{display:flex;align-items:center;gap:10px}
+.rc-top img{width:24px;height:24px;flex:0 0 auto}
+.rc-top strong{font-size:1.55rem;font-weight:800;line-height:1;letter-spacing:-.02em}
+.rc-mid{display:flex;align-items:center;height:18px;font-size:.85rem;font-weight:700;line-height:1}
+.rc-mid .star-row svg{width:16px;height:16px}
+.rc-sub{font-size:.82rem;line-height:1.25}
+.on-dark{margin:0 0 28px}
+.on-dark .rating-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff}
+.on-dark .rating-chip:hover{background:rgba(255,255,255,.16)}
+.on-dark .rc-sub{color:rgba(255,255,255,.78)}
+.on-light .rating-chip{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);color:var(--ink)}
+.on-light .rc-sub{color:var(--muted)}
+.on-light .rc-rec{color:#1877f2}
+@media (max-width:700px){
+  .rating-chips{width:100%}
+  .rating-chip{flex:1 1 0;min-width:0;padding:12px 14px}
+  .rc-top strong{font-size:1.4rem}
+}
+@media (max-width:380px){.rating-chip{padding:12px}.rc-sub{font-size:.76rem}}
