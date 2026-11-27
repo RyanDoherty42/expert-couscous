@@ -342,13 +342,13 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 .rb-score{font-size:1.7rem;font-weight:800;line-height:1;letter-spacing:-.02em}
 .rb-meta{display:flex;flex-direction:column;gap:4px;font-size:.88rem;color:var(--muted);line-height:1.2}
 .rb-rec{font-weight:700;color:#1877f2}
-.btn.google svg{color:#fbbc04}
 /* Reviews section layout */
 .reviews-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 32px;margin-bottom:40px}
 .reviews-head .section-head{margin-bottom:0}
 .rating-badges{display:flex;gap:12px}
-.btn.google{background:#202124;color:#fff}
-.btn.google:hover{background:#000}
+.btn.google{background:#fff;color:#1f1f1f;border:1.5px solid #dadce0}
+.btn.google:hover{background:#f8f9fa;border-color:#c4c7c5}
+.btn.google img{width:20px;height:20px;flex:0 0 auto}
 .review-stars{margin-bottom:14px}
 .review-stars .star-row svg{width:18px;height:18px}
 .review figcaption{display:flex;flex-direction:column;gap:2px}
