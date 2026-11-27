@@ -481,3 +481,10 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 .videos .section-head p{color:#bdbdbd}
 .videos .video-card{box-shadow:none}
 .videos :focus-visible{outline-color:#fff}
+/* Areas: equal-width tags in even rows, so the edges line up and no town sits on its own */
+.area-list{gap:8px}
+.area-list li{flex:1 1 calc(33.333% - 6px);justify-content:center;padding:8px 10px}
+@media(max-width:520px),(min-width:801px) and (max-width:899px){
+  .area-list li{flex-basis:calc(50% - 4px)}
+}
+@media(max-width:520px){.area-list li{font-size:.9rem}}
