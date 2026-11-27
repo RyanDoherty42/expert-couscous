@@ -475,3 +475,9 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 }
 @media(max-width:800px){.videos-head .social-actions{width:100%}}
 @media(min-width:1001px){.video-card{aspect-ratio:2/3}.vc-play{top:44%}}
+/* Video section sits between two light sections, so give it a dark backdrop */
+.videos{background:#111;color:#fff}
+.videos .kicker{color:#ff7a88}
+.videos .section-head p{color:#bdbdbd}
+.videos .video-card{box-shadow:none}
+.videos :focus-visible{outline-color:#fff}
