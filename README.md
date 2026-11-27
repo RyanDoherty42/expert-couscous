@@ -13,6 +13,7 @@ Preview: https://preview-yorkshire-man-and-van-removals-v1.pvzv6vpvmn.workers.de
 2. Only merge `preview` into `main` when the owner says "go live".
 3. Bump the `?v=` number on the CSS/JS links in every HTML page with each change (it forces browsers to load the new files).
 4. Convert photos to resized `.webp` in `public/assets/`, in two widths like the existing ones (e.g. `-480` and `-900`).
+5. On every "go live": add an entry to `CHANGELOG.md` (on `preview`, before merging), then tag the live commit on `main` as `live-YYYY-MM-DD-vNN`, using the current `?v=` number. To roll back, restore `main` to a tag.
 
 ## Files
 - `public/index.html`: the homepage. The towns covered are in `class="area-list"`.
