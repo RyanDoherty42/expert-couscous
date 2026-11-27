@@ -3,6 +3,9 @@
 What changed each time the site went live. Newest first.
 Each entry lists the commit that went live, so the site can be put back to any of these points.
 
+## 27 Nov 2026 – v49 (commit `64a9a54`)
+- Areas covered: town tags stretch to fill each row so both edges line up, and no town is ever left on a row on its own
+
 ## 27 Nov 2026 – v47 (commit `2d71bd5`)
 - New "Watch us at work" TikTok section with five video thumbnails linking to TikTok, between "What we do" and "About us", on a dark background
 - Removed the old "Have you checked us out on Facebook and TikTok?" banner
