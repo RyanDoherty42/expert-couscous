@@ -1,0 +1,26 @@
+YORKSHIRE MAN & VAN REMOVALS — WEBSITE v12
+==========================================
+
+DEPLOY (Cloudflare Pages, free plan)
+  Upload the CONTENTS of this folder (index.html, css/, js/, assets/, _headers, etc.)
+  via Pages > Create > Direct Upload, or connect it to a Git repo.
+
+DOMAIN
+  The site is set up for https://yorkshiremanandvanremovals.co.uk (no www) in the canonical link,
+  social preview, structured data, robots.txt and sitemap.xml. If you decide to use www
+  instead, search and replace "https://yorkshiremanandvanremovals.co.uk" with
+  "https://www.yorkshiremanandvanremovals.co.uk" in those files. In Cloudflare, add a redirect from
+  whichever version you don't use (Rules > Redirect Rules, free).
+
+AFTER GOING LIVE
+  - Add the site to Google Search Console and submit sitemap.xml.
+  - Use the same phone number and website on your Google Business Profile.
+  - Optional: Cloudflare Web Analytics (free, cookie-free): Pages project > Metrics > Enable.
+
+THINGS TO KEEP AN EYE ON
+  - The towns under "Based in Doncaster, working across Yorkshire" (index.html, class="area-list").
+  - privacy.html is a plain-English starter notice, not legal advice.
+
+HOW THE FORM WORKS
+  3 short steps (what & when / where / what & who). Answers are turned into a WhatsApp message
+  that the customer checks and sends. Nothing is stored on a server.
