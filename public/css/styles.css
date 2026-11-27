@@ -127,8 +127,10 @@ h2{font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.08;letter-spacing:-.03em;f
 .social-band h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 10px}
 .social-band p{margin:0;color:var(--muted);font-size:1.05rem}
 .social-actions{display:grid;grid-template-columns:repeat(2,150px);justify-content:center;gap:12px;margin:26px 0 0}
-.social-actions .btn{min-height:50px;padding:12px 14px;width:100%;color:#fff}
-.social-fb{background:#1665d8}.social-fb:hover{background:#0b57c8}
+.social-actions .btn{min-height:50px;padding:12px 14px;width:100%}
+.social-actions .social-tt{color:#fff}
+.btn.social-fb{background:#fff;color:#1f1f1f;border:1.5px solid #dadce0}.btn.social-fb:hover{background:#f8f9fa;border-color:#c4c7c5}
+.btn.social-fb img{width:20px;height:20px;flex:0 0 auto}
 .social-tt{background:#111}.social-tt:hover{background:#000}
 
 /* Form */
@@ -331,9 +333,8 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 .hero-rating{display:inline-flex;align-items:center;gap:8px;color:#f1f1f1;font-size:.95rem;font-weight:600;text-decoration:none}
 .hero-rating strong{color:#fff}
 .hero-rating:hover{text-decoration:underline}
-.hero-rating svg.fb{width:20px;height:20px;padding:3px;border-radius:50%;background:#1877f2;color:#fff;flex:0 0 auto}
+.hero-rating img.fb{width:20px;height:20px;flex:0 0 auto}
 .reviews-link{display:flex;flex-wrap:wrap;gap:12px}
-.reviews-link .social-fb{color:#fff}
 .reviews-link svg{width:18px;height:18px}
 .star-row{display:inline-flex;gap:2px;color:#fbbc04;flex:0 0 auto}
 .star-row svg{width:17px;height:17px;display:block}
