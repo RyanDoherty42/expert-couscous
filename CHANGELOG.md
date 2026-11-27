@@ -3,6 +3,13 @@
 What changed each time the site went live. Newest first.
 Each entry lists the commit that went live, so the site can be put back to any of these points.
 
+## 27 Nov 2026 – v44 (commit `893b928`)
+- Site-wide design polish: see-through call button in the main banner, compact service cards on phones, area tags instead of a list, nationwide note box
+- Photos swipe sideways on phones, like the reviews
+- FAQs in two columns on computers, with a "Still got a question?" call/WhatsApp box
+- Tighter spacing between sections
+- Cropped the iPhone Live Text icon out of the wrapped table photo
+
 ## 27 Nov 2026 – v41 (commit `b1a812f`)
 - Google and Facebook rating cards with logos in the main banner and the reviews section
 - Reviews section renamed "What our customers say", with a tidier layout and swipeable reviews on phones
