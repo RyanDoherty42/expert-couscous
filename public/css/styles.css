@@ -449,5 +449,3 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
   .faq-cta-actions .btn{width:100%}
   .social-band{padding:48px 0}
 }
-/* Stop iPhone "Live Text" button appearing on photos with writing in them */
-.photo img,.lightbox img,.about-photo,.hero-bg{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
