@@ -260,3 +260,46 @@
 
   showStep(1, false);
 })();
+
+/* Areas covered: if the last town would sit on a row on its own, move one or more towns down to keep it company */
+(function () {
+  var list = document.querySelector('.area-list');
+  if (!list) return;
+  function rows() {
+    var tops = [], counts = {};
+    Array.prototype.forEach.call(list.children, function (li) {
+      if (li.classList.contains('area-break')) return;
+      var t = Math.round(li.offsetTop);
+      if (!(t in counts)) { counts[t] = 0; tops.push(t); }
+      counts[t]++;
+    });
+    return tops.map(function (t) { return counts[t]; });
+  }
+  function fix() {
+    Array.prototype.forEach.call(list.querySelectorAll('.area-break'), function (b) { b.remove(); });
+    var r = rows();
+    if (r.length < 2 || r[r.length - 1] > 1) return;
+    var towns = Array.prototype.slice.call(list.querySelectorAll('li'));
+    var n = towns.length, picks = [];
+    for (var a = n - 2; a >= Math.max(1, n - 7); a--) {
+      picks.push([a]);
+      for (var c = a - 1; c >= Math.max(1, n - 7); c--) picks.push([c, a]);
+    }
+    picks.sort(function (x, y) { return x.length - y.length; });
+    for (var i = 0; i < picks.length; i++) {
+      var added = picks[i].map(function (idx) {
+        var brk = document.createElement('li');
+        brk.className = 'area-break';
+        brk.setAttribute('aria-hidden', 'true');
+        list.insertBefore(brk, towns[idx]);
+        return brk;
+      });
+      if (rows().every(function (k) { return k > 1; })) return;
+      added.forEach(function (b) { b.remove(); });
+    }
+  }
+  var timer;
+  window.addEventListener('resize', function () { clearTimeout(timer); timer = setTimeout(fix, 100); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fix);
+  fix();
+})();
