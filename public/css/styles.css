@@ -1,5 +1,6 @@
 /* Yorkshire Man & Van Removals — stylesheet (v11: simplified, calmer layout) */
 :root{
+  --gutter:24px;
   --red:#c91424;--red-dark:#a80f1d;--red-tint:#fff0f1;--ink:#171717;--muted:#5f5f5f;--soft:#f5f5f4;--line:#e6e6e4;
   --wa:#0f8040;--wa-dark:#0b6a35;           /* WhatsApp green darkened so white text passes WCAG AA */
   --radius:16px;--header-h:72px;
@@ -281,6 +282,7 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 }
 /* Phone */
 @media(max-width:520px){
+  :root{--gutter:16px}
   .wrap{width:calc(100% - 32px)}
   .nav-links{left:-16px;right:-16px;padding-left:16px;padding-right:16px}
   .header-actions .btn{padding:11px 16px;font-size:.92rem;min-height:44px}
@@ -351,7 +353,7 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
 .reviews-link{margin:36px 0 0}
 @media (max-width:700px){
   .reviews-head{margin-bottom:28px}
-  .review-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 calc(50% - 50vw);padding:4px calc(50vw - 50%) 12px;scroll-padding:0 calc(50vw - 50%);-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .review-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 calc(50% - 50vw);padding:4px calc(50vw - 50%) 12px;scroll-padding:0 var(--gutter);-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .review-grid::-webkit-scrollbar{display:none}
   .review,.review:nth-child(n+4){flex:0 0 84%;scroll-snap-align:start}
   .reviews-link{margin-top:24px}
@@ -379,3 +381,71 @@ footer{background:#111;color:#fff;padding:56px 0 32px}
   .rc-top strong{font-size:1.4rem}
 }
 @media (max-width:380px){.rating-chip{padding:12px}.rc-sub{font-size:.76rem}}
+
+/* ===== Design polish (v42) ===== */
+/* Hero: secondary call button */
+.btn.hero-call-btn{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.35);color:#fff;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.btn.hero-call-btn:hover{background:rgba(255,255,255,.2)}
+
+/* Services: softer cards, subtle red hover */
+.service{background:#fff;border-color:var(--line)}
+.service:hover{border-color:#f3c3c8}
+.services-note{display:inline-block;margin:28px 0 0;padding:12px 18px;background:var(--soft);border-radius:999px;font-size:.95rem}
+
+/* Areas: compact pills instead of a long list */
+.area-list{display:flex;flex-wrap:wrap;gap:8px;padding:0;background:none;border:0;border-radius:0}
+.area-list li{gap:8px;padding:8px 14px;background:#fff;border:1px solid var(--line);border-radius:999px;font-size:.92rem;font-weight:600}
+.area-list li:before{flex:0 0 6px;height:6px}
+.area-list li.base{background:var(--red);border-color:var(--red);color:#fff}
+.area-list li.base:before{background:#fff}
+.about .nationwide{margin:20px 0 0;padding:16px 18px;background:#fff;border-left:4px solid var(--red);border-radius:12px;font-size:.98rem}
+
+/* Even spacing between same-colour sections */
+.gallery{padding-bottom:48px}
+.gallery~.reviews{padding-top:48px}
+
+/* FAQ: heading + contact on the left, questions on the right */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq-side{position:sticky;top:calc(var(--header-h) + 28px)}
+.faq-side .section-head{margin-bottom:24px}
+.faq-list{max-width:none}
+.faq-cta{background:var(--soft);border-radius:var(--radius);padding:22px}
+.faq-cta p{margin:0 0 16px;color:#3d3d3d;font-size:.98rem}
+.faq-cta p strong{display:block;color:var(--ink);font-size:1.05rem;margin-bottom:2px}
+.faq-cta-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.faq-cta-actions .btn{min-height:46px;padding:10px 14px;font-size:.95rem}
+
+/* Social band: tighter */
+.social-band{padding:64px 0}
+
+@media(max-width:1000px){
+  .faq-grid{grid-template-columns:1fr;gap:28px}
+  .faq-side{position:static}
+}
+@media(max-width:800px){
+  .about-photo{min-height:0;max-height:none;aspect-ratio:4/3;height:auto}
+  .faq-cta{display:none}
+  /* Gallery: swipe on phones, like the reviews */
+  .photos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 calc(50% - 50vw);padding:4px calc(50vw - 50%) 8px;scroll-padding:0 var(--gutter);scrollbar-width:none}
+  .photos::-webkit-scrollbar{display:none}
+  .photo{flex:0 0 72%;scroll-snap-align:start;aspect-ratio:4/5}
+}
+@media(max-width:520px){
+  .hero-actions .btn.hero-call-btn{display:none}
+  /* Services: compact rows with the icon beside the title */
+  .services{gap:12px}
+  .service{display:grid;grid-template-columns:44px 1fr;column-gap:16px;padding:18px}
+  .service .icon{grid-row:span 2;width:44px;height:44px;margin:0}
+  .service h3{margin:2px 0 4px;font-size:1.08rem}
+  .service p{font-size:.95rem;line-height:1.5}
+  .services-note{border-radius:14px;display:block}
+  .area-list li{padding:7px 12px;font-size:.88rem}
+  .gallery{padding-bottom:36px}
+  .gallery~.reviews{padding-top:36px}
+  .next-steps{gap:12px;margin-bottom:8px}
+  .next-steps li{font-size:.96rem}
+  .quote-intro>p{margin-bottom:20px}
+  .faq summary{padding:18px 2px;min-height:56px}
+  .faq-cta-actions .btn{width:100%}
+  .social-band{padding:48px 0}
+}
