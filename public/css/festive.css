@@ -1,0 +1,35 @@
+/* ===== Christmas touches =====
+   To remove after the holidays: delete this file, its <link> in index.html,
+   and the three blocks marked "festive" in index.html. */
+
+/* Top banner */
+.festive-bar{position:relative;z-index:31;background:#0f5132;color:#fff;font-size:.92rem;font-weight:600;text-align:center;padding:9px 16px;line-height:1.35}
+.festive-bar a{color:#ffd76a;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.festive-bar a:hover{color:#fff}
+.festive-bar .fb-tree{margin-right:6px}
+
+/* Gentle snowfall over the main banner photo */
+.hero .wrap{position:relative;z-index:1}
+.snow{position:absolute;inset:-10% 0 0;z-index:0;pointer-events:none;opacity:.85;
+  background-image:
+    radial-gradient(4.2px 4.2px at 20px 30px,#fff 50%,transparent 51%),
+    radial-gradient(3.4px 3.4px at 140px 80px,#fff 50%,transparent 51%),
+    radial-gradient(5.1px 5.1px at 230px 160px,#fff 50%,transparent 51%),
+    radial-gradient(3.4px 3.4px at 60px 210px,#fff 50%,transparent 51%),
+    radial-gradient(4.2px 4.2px at 290px 260px,#fff 50%,transparent 51%),
+    radial-gradient(2.5px 2.5px at 110px 140px,#fff 50%,transparent 51%),
+    radial-gradient(2.5px 2.5px at 180px 290px,#fff 50%,transparent 51%);
+  background-size:320px 320px;animation:snowfall 18s linear infinite}
+.snow:after{content:"";position:absolute;inset:0;opacity:.6;
+  background-image:
+    radial-gradient(2.5px 2.5px at 40px 60px,#fff 50%,transparent 51%),
+    radial-gradient(3.4px 3.4px at 170px 20px,#fff 50%,transparent 51%),
+    radial-gradient(2.5px 2.5px at 260px 200px,#fff 50%,transparent 51%),
+    radial-gradient(3.4px 3.4px at 90px 250px,#fff 50%,transparent 51%);
+  background-size:280px 280px;animation:snowfall 26s linear infinite}
+@keyframes snowfall{from{background-position:0 0}to{background-position:60px 640px}}
+@media (prefers-reduced-motion:reduce){.snow,.snow:after{animation:none}}
+
+/* Footer greeting */
+.festive-greeting{margin:28px 0 18px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-weight:600;text-align:center}
+.festive-greeting span{margin:0 6px}
