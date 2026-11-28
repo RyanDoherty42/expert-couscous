@@ -1,28 +1,38 @@
 /* ===== Christmas touches =====
    To remove after the holidays: delete this file, its <link> in index.html,
-   and the two lines marked "festive" in index.html. */
+   and the lines marked "festive" in index.html. */
 
-/* Candy-cane stripe along the bottom of the header */
-header{border-bottom:0}
-header:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;pointer-events:none;
-  background:repeating-linear-gradient(135deg,var(--red) 0 10px,#fff 10px 20px)}
+/* Fairy lights draped across the top of the main banner */
+.xmas-lights{position:absolute;top:0;left:0;width:100%;height:78px;z-index:0;pointer-events:none;overflow:visible}
+.hero .wrap{position:relative;z-index:1}
+.xmas-lights .glow{opacity:.35;filter:blur(6px)}
+.xmas-lights .bulb{animation:bulb 2.6s ease-in-out infinite}
+.xmas-lights .bulb:nth-of-type(4n+2){animation-delay:.65s}
+.xmas-lights .bulb:nth-of-type(4n+3){animation-delay:1.3s}
+.xmas-lights .bulb:nth-of-type(4n){animation-delay:1.95s}
+@keyframes bulb{0%,100%{opacity:1}50%{opacity:.55}}
+@media (prefers-reduced-motion:reduce){.xmas-lights .bulb{animation:none}}
 
-/* Cheeky note in the main banner, with a candy-cane edge */
-.xmas-pill{display:inline-flex;align-items:center;gap:8px;margin:0 0 18px;padding:8px 16px;border-radius:999px;
-  color:#fff;font-weight:600;font-size:.92rem;line-height:1.35;text-decoration:none;
-  border:2px solid transparent;
-  background:linear-gradient(#1a1a1a,#1a1a1a) padding-box,
-             repeating-linear-gradient(135deg,var(--red) 0 8px,#fff 8px 16px) border-box;
-  transition:transform .2s}
-.xmas-pill:hover{transform:translateY(-1px)}
+/* Friendly seasonal note in the main banner */
+.xmas-note{display:inline-flex;align-items:center;gap:12px;max-width:100%;margin:0 0 20px;padding:6px 6px 6px 16px;border-radius:999px;
+  background:rgba(255,255,255,.94);color:#1a1a1a;text-decoration:none;font-size:.92rem;font-weight:600;line-height:1.35;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .2s}
+.xmas-note b{flex:0 0 auto;padding:7px 12px;border-radius:999px;background:var(--red);color:#fff;font-size:.84rem;font-weight:700;white-space:nowrap}
+.xmas-note:hover{transform:translateY(-1px)}
 
-/* Footer greeting */
-.xmas-greeting{margin:28px 0 20px;padding:16px 20px;border-radius:16px;background:rgba(255,255,255,.06);
-  border:2px solid transparent;
-  background:linear-gradient(#1b1b1b,#1b1b1b) padding-box,
-             repeating-linear-gradient(135deg,var(--red) 0 8px,#fff 8px 16px) border-box;
-  font-weight:600;line-height:1.5}
+/* Gift-tag greeting in the footer */
+.xmas-tag{position:relative;max-width:520px;margin:36px 0 26px;padding:22px 26px 22px 56px;background:#fff;color:#1a1a1a;
+  border-radius:6px 16px 16px 6px;transform:rotate(-1.5deg);box-shadow:0 14px 30px rgba(0,0,0,.35);
+  clip-path:polygon(22px 0,100% 0,100% 100%,22px 100%,0 50%)}
+.xmas-tag:before{content:"";position:absolute;left:20px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;
+  background:#111;box-shadow:inset 0 0 0 2px var(--red)}
+.xmas-tag p{margin:0;line-height:1.55;color:#3a3a3a}
+.xmas-tag .xmas-tag-title{margin-bottom:4px;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:1.5rem;color:var(--red)}
 
 @media(max-width:520px){
-  .xmas-pill{font-size:.86rem;padding:8px 14px;border-radius:18px}
+  .xmas-lights{height:64px}
+  .xmas-note{gap:10px;padding:8px 8px 8px 16px;border-radius:20px;font-size:.86rem}
+  .xmas-note b{display:grid;place-items:center;width:36px;height:36px;padding:0;font-size:1rem}
+  .xmas-note .xn-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .xmas-tag{margin:30px 4px 22px;padding:20px 20px 20px 50px;transform:rotate(-1deg)}
 }
