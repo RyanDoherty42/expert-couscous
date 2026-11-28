@@ -3,6 +3,10 @@
 What changed each time the site went live. Newest first.
 Each entry lists the commit that went live, so the site can be put back to any of these points.
 
+## 28 Nov 2026 – v56 (commit `772babf`)
+- Christmas: gift-tag greeting at the top of the main banner (hangs on the right on wide screens, slim version on phones) and a Santa hat on the logo
+- All Christmas styling is in `public/css/festive.css`; to remove in January, delete that file, its link in index.html, and the blocks marked "festive" in index.html
+
 ## 27 Nov 2026 – v49 (commit `64a9a54`)
 - Areas covered: town tags stretch to fill each row so both edges line up, and no town is ever left on a row on its own
 
