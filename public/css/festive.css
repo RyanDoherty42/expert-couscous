@@ -1,52 +1,28 @@
-/* ===== Christmas season =====
+/* ===== Christmas touches =====
    To remove after the holidays: delete this file, its <link> in index.html,
-   and the blocks marked "festive" in index.html (the hero line is noted there too). */
+   and the two lines marked "festive" in index.html. */
 
-:root{--evergreen:#12372a;--evergreen-2:#0c2a20;--gold:#d9b46c;--cream:#f6f1e7}
-.serif-accent{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+/* Candy-cane stripe along the bottom of the header */
+header{border-bottom:0}
+header:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;pointer-events:none;
+  background:repeating-linear-gradient(135deg,var(--red) 0 10px,#fff 10px 20px)}
 
-/* "Home for Christmas" section */
-.season{position:relative;isolation:isolate;overflow:hidden;color:var(--cream);
-  background:
-    radial-gradient(circle at 88% 8%,rgba(217,180,108,.22),transparent 38%),
-    radial-gradient(circle at 6% 96%,rgba(200,16,46,.18),transparent 42%),
-    linear-gradient(160deg,var(--evergreen),var(--evergreen-2))}
-/* soft, out-of-focus "fairy light" glow */
-.season:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.55;pointer-events:none;
-  background:
-    radial-gradient(circle at 72% 22%,rgba(255,214,140,.35) 0 3px,transparent 14px),
-    radial-gradient(circle at 80% 34%,rgba(255,214,140,.25) 0 2px,transparent 10px),
-    radial-gradient(circle at 92% 28%,rgba(255,214,140,.3) 0 2px,transparent 12px),
-    radial-gradient(circle at 64% 12%,rgba(255,214,140,.2) 0 2px,transparent 9px)}
-.season .kicker{color:var(--gold)}
-.season h2{color:#fff;max-width:16ch}
-.season h2 .serif-accent{color:var(--gold);font-size:1.08em}
-.season-lead{max-width:56ch;margin:0;color:rgba(246,241,231,.82);font-size:1.1rem;line-height:1.65}
-.season-head .section-head{margin-bottom:0}
-.season-head{display:grid;grid-template-columns:1fr 1fr;gap:24px 56px;align-items:end;margin-bottom:48px}
-.season-points{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:0;padding:0;list-style:none;counter-reset:pt}
-.season-points li{counter-increment:pt;padding:26px 24px 24px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(217,180,108,.22)}
-.season-points li:before{content:"0" counter(pt);display:block;margin-bottom:14px;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:1.5rem;color:var(--gold)}
-.season-points h3{margin:0 0 8px;color:#fff;font-size:1.12rem}
-.season-points p{margin:0;color:rgba(246,241,231,.78);line-height:1.6;font-size:.98rem}
-.season-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:40px}
-.season-cta p{margin:0;color:rgba(246,241,231,.75);font-size:.95rem}
-.season-cta .btn{box-shadow:0 10px 30px rgba(0,0,0,.25)}
+/* Cheeky note in the main banner, with a candy-cane edge */
+.xmas-pill{display:inline-flex;align-items:center;gap:8px;margin:0 0 18px;padding:8px 16px;border-radius:999px;
+  color:#fff;font-weight:600;font-size:.92rem;line-height:1.35;text-decoration:none;
+  border:2px solid transparent;
+  background:linear-gradient(#1a1a1a,#1a1a1a) padding-box,
+             repeating-linear-gradient(135deg,var(--red) 0 8px,#fff 8px 16px) border-box;
+  transition:transform .2s}
+.xmas-pill:hover{transform:translateY(-1px)}
 
-/* Footer: season's greetings */
-.season-greeting{margin:32px 0 22px;padding:22px 0 0;border-top:1px solid rgba(217,180,108,.35);display:grid;grid-template-columns:auto 1fr;gap:6px 28px;align-items:baseline}
-.season-greeting strong{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;font-size:1.45rem;color:var(--gold)}
-.season-greeting p{margin:0;color:rgba(255,255,255,.78);line-height:1.6}
+/* Footer greeting */
+.xmas-greeting{margin:28px 0 20px;padding:16px 20px;border-radius:16px;background:rgba(255,255,255,.06);
+  border:2px solid transparent;
+  background:linear-gradient(#1b1b1b,#1b1b1b) padding-box,
+             repeating-linear-gradient(135deg,var(--red) 0 8px,#fff 8px 16px) border-box;
+  font-weight:600;line-height:1.5}
 
-@media(max-width:900px){
-  .season-head{grid-template-columns:1fr;gap:14px;margin-bottom:28px}
-  .season-lead{font-size:1.02rem}
-  .season-points{grid-template-columns:1fr;gap:12px}
-  .season-points li{display:grid;grid-template-columns:36px 1fr;column-gap:10px;padding:20px 18px}
-  .season-points li:before{grid-row:span 2;margin:0;font-size:1.35rem;line-height:1.2}
-  .season-greeting{grid-template-columns:1fr}
-}
 @media(max-width:520px){
-  .season-cta .btn{width:100%}
-  .season-cta p{text-align:center;width:100%}
+  .xmas-pill{font-size:.86rem;padding:8px 14px;border-radius:18px}
 }
