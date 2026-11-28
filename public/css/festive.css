@@ -33,3 +33,22 @@
   .xmas-twine,.xmas-twine:after{width:50px}
   .xmas-twine{left:-26px}
 }
+
+/* Keep the ticks and rating cards where they were */
+.xmas-short{display:none}
+/* Computers: the tag hangs in the empty space on the right of the photo, taking up no room */
+@media(min-width:1150px){
+  .hero .wrap{position:relative}
+  .xmas-tag{position:absolute;top:-34px;right:0;width:420px;margin:0;transform:rotate(3deg);transform-origin:left center}
+}
+/* Phones, tablets and small laptops: a slim tag, with the banner's top spacing tightened to make room */
+@media(max-width:1149px){
+  .hero:has(.xmas-tag){padding-top:14px}
+  .xmas-tag{margin:0 0 12px 30px;max-width:330px;transform:rotate(-1deg)}
+  .xmas-card{padding:9px 16px 9px 58px}
+  .xmas-card:after{top:5px;bottom:5px;right:5px}
+  .xmas-card .xmas-tag-title{font-size:1.15rem;margin-bottom:0}
+  .xmas-long{display:none}
+  .xmas-short{display:block}
+  .xmas-card p.xmas-short{font-size:.8rem;line-height:1.3}
+}
