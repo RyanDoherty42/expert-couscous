@@ -1,38 +1,35 @@
 /* ===== Christmas touches =====
    To remove after the holidays: delete this file, its <link> in index.html,
-   and the lines marked "festive" in index.html. */
+   and the blocks marked "festive" in index.html (gift tag in the main banner, Santa hat on the logo). */
 
-/* Fairy lights draped across the top of the main banner */
-.xmas-lights{position:absolute;top:0;left:0;width:100%;height:78px;z-index:0;pointer-events:none;overflow:visible}
-.hero .wrap{position:relative;z-index:1}
-.xmas-lights .glow{opacity:.35;filter:blur(6px)}
-.xmas-lights .bulb{animation:bulb 2.6s ease-in-out infinite}
-.xmas-lights .bulb:nth-of-type(4n+2){animation-delay:.65s}
-.xmas-lights .bulb:nth-of-type(4n+3){animation-delay:1.3s}
-.xmas-lights .bulb:nth-of-type(4n){animation-delay:1.95s}
-@keyframes bulb{0%,100%{opacity:1}50%{opacity:.55}}
-@media (prefers-reduced-motion:reduce){.xmas-lights .bulb{animation:none}}
+/* Gift tag at the top of the main banner */
+.xmas-tag{position:relative;max-width:470px;margin:4px 0 28px 36px;transform:rotate(-2deg);transform-origin:left center;
+  filter:drop-shadow(0 14px 22px rgba(0,0,0,.45))}
+.xmas-card{position:relative;padding:20px 26px 20px 64px;background:#fffaf2;color:#1a1a1a;border-radius:6px 14px 14px 6px;
+  clip-path:polygon(28px 0,100% 0,100% 100%,28px 100%,0 50%)}
+/* dashed red border, like a printed tag */
+.xmas-card:after{content:"";position:absolute;top:7px;right:7px;bottom:7px;left:48px;border:1.5px dashed rgba(200,16,46,.5);border-radius:4px 10px 10px 4px;pointer-events:none}
+/* punched hole with a red ring */
+.xmas-card:before{content:"";position:absolute;left:21px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;
+  background:#262626;box-shadow:0 0 0 3px #c8102e}
+.xmas-card p{position:relative;margin:0;line-height:1.5;color:#3a3a3a;font-size:.95rem}
+.xmas-card .xmas-tag-title{margin-bottom:4px;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:1.55rem;line-height:1.15;color:#c8102e}
+/* red-and-white twine looping from the hole */
+.xmas-twine{position:absolute;z-index:1;left:-34px;top:50%;width:64px;height:3px;margin-top:-1.5px;border-radius:2px;
+  transform:rotate(-22deg);transform-origin:right center;
+  background:repeating-linear-gradient(90deg,#c8102e 0 6px,#fff 6px 12px)}
+.xmas-twine:after{content:"";position:absolute;right:-2px;top:-1px;width:64px;height:3px;border-radius:2px;transform:rotate(44deg);transform-origin:right center;
+  background:repeating-linear-gradient(90deg,#c8102e 0 6px,#fff 6px 12px)}
 
-/* Friendly seasonal note in the main banner */
-.xmas-note{display:inline-flex;align-items:center;gap:12px;max-width:100%;margin:0 0 20px;padding:6px 6px 6px 16px;border-radius:999px;
-  background:rgba(255,255,255,.94);color:#1a1a1a;text-decoration:none;font-size:.92rem;font-weight:600;line-height:1.35;
-  box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .2s}
-.xmas-note b{flex:0 0 auto;padding:7px 12px;border-radius:999px;background:var(--red);color:#fff;font-size:.84rem;font-weight:700;white-space:nowrap}
-.xmas-note:hover{transform:translateY(-1px)}
-
-/* Gift-tag greeting in the footer */
-.xmas-tag{position:relative;max-width:520px;margin:36px 0 26px;padding:22px 26px 22px 56px;background:#fff;color:#1a1a1a;
-  border-radius:6px 16px 16px 6px;transform:rotate(-1.5deg);box-shadow:0 14px 30px rgba(0,0,0,.35);
-  clip-path:polygon(22px 0,100% 0,100% 100%,22px 100%,0 50%)}
-.xmas-tag:before{content:"";position:absolute;left:20px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;
-  background:#111;box-shadow:inset 0 0 0 2px var(--red)}
-.xmas-tag p{margin:0;line-height:1.55;color:#3a3a3a}
-.xmas-tag .xmas-tag-title{margin-bottom:4px;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:1.5rem;color:var(--red)}
+/* Santa hat on the header logo */
+.brand{position:relative}
+.santa-hat{position:absolute;top:-10px;right:4px;width:24px;height:21px;transform:rotate(14deg);pointer-events:none;filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
 
 @media(max-width:520px){
-  .xmas-lights{height:64px}
-  .xmas-note{gap:10px;padding:8px 8px 8px 16px;border-radius:20px;font-size:.86rem}
-  .xmas-note b{display:grid;place-items:center;width:36px;height:36px;padding:0;font-size:1rem}
-  .xmas-note .xn-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  .xmas-tag{margin:30px 4px 22px;padding:20px 20px 20px 50px;transform:rotate(-1deg)}
+  .xmas-tag{margin:4px 0 22px 30px}
+  .xmas-card{padding:16px 18px 16px 52px}
+  .xmas-card .xmas-tag-title{font-size:1.35rem}
+  .xmas-card p{font-size:.9rem}
+  .xmas-twine,.xmas-twine:after{width:50px}
+  .xmas-twine{left:-26px}
 }
