@@ -33,3 +33,33 @@
 /* Footer greeting */
 .festive-greeting{margin:28px 0 18px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-weight:600;text-align:center}
 .festive-greeting span{margin:0 6px}
+
+/* Twinkling fairy lights along the bottom of the top banner */
+.festive-bar{padding-bottom:17px}
+.festive-bar:after{content:"";position:absolute;left:0;right:0;bottom:3px;height:9px;
+  background:
+    radial-gradient(circle at 12px 5px,#ff4d5e 0 3px,transparent 3.5px),
+    radial-gradient(circle at 36px 5px,#ffd76a 0 3px,transparent 3.5px),
+    radial-gradient(circle at 60px 5px,#6be38f 0 3px,transparent 3.5px),
+    radial-gradient(circle at 84px 5px,#7cc4ff 0 3px,transparent 3.5px);
+  background-size:96px 9px;animation:twinkle 2.4s ease-in-out infinite}
+.festive-bar:before{content:"";position:absolute;left:0;right:0;bottom:7px;height:1px;background:rgba(255,255,255,.25)}
+@keyframes twinkle{0%,100%{opacity:1;filter:drop-shadow(0 0 3px rgba(255,255,255,.6))}50%{opacity:.55;filter:none}}
+
+/* Santa hat on the header logo */
+.brand{position:relative}
+.santa-hat{position:absolute;top:-10px;right:4px;width:24px;height:21px;transform:rotate(14deg);pointer-events:none;filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
+
+/* Little snowflake before each section label */
+.kicker:before,.eyebrow:before{content:"❄";display:inline-block;margin-right:8px;font-size:1.05em;letter-spacing:0;color:#7cc4ff;transform:translateY(1px)}
+
+/* Snow in the dark sections too */
+.videos,footer{position:relative;isolation:isolate;overflow:hidden}
+.videos .wrap,footer .wrap{position:relative;z-index:1}
+.videos .snow,footer .snow{inset:-10% 0 0;opacity:.5}
+
+/* Section labels in festive green on light backgrounds, keep red buttons */
+.section-head .kicker,.about .kicker,.quote-intro .kicker{color:#0f7a4a}
+
+@media (prefers-reduced-motion:reduce){.festive-bar:after{animation:none}}
+.videos .section-head .kicker{color:#6be38f}
