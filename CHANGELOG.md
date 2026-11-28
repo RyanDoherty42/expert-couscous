@@ -3,6 +3,9 @@
 What changed each time the site went live. Newest first.
 Each entry lists the commit that went live, so the site can be put back to any of these points.
 
+## 28 Nov 2026 – v57 (commit `044374f`)
+- Christmas: gold tinsel around the "Get a free quote", call and WhatsApp buttons (in `festive.css`, removed with the rest in January)
+
 ## 28 Nov 2026 – v56 (commit `772babf`)
 - Christmas: gift-tag greeting at the top of the main banner (hangs on the right on wide screens, slim version on phones) and a Santa hat on the logo
 - All Christmas styling is in `public/css/festive.css`; to remove in January, delete that file, its link in index.html, and the blocks marked "festive" in index.html
